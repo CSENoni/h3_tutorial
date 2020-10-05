@@ -15,4 +15,10 @@ public class ValidateISBNTest {
 		assertTrue(result);
 	}
 
+	@Test
+	public void checkAInvalidISBN() {
+		ValidateISBN validator = new ValidateISBN();
+		boolean result = validator.checkISBN(1400012335);
+		assertFalse(result);
+	}
 }
